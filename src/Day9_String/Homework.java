@@ -9,24 +9,25 @@ public class Homework {
 //    If name starts with “C” and ends with “K” , Check is the name is equal to “Clark” or “CLARK”.
 public static void main(String[] args) {
 
-    Scanner input= new Scanner(System.in);
-    System.out.println("Please Enter a Name");
+    Scanner input = new Scanner(System.in);
 
-   String name=input.nextLine();
-    String name1=name.replace('A','B');
-    String name2=name.replace('A','G');
-    String name3= String.valueOf(name.equals("Clark")||name.equals("CLARK"));
+    System.out.println("Please enter a name:");
+    String name = input.nextLine();
+    String name1 = name.toUpperCase();
 
-   if( name.startsWith("A") && name.endsWith("L") );{
-
-    System.out.println(name1);}
-//    boolean check= name.startsWith("B") && name.endsWith("L");
-    if( name.startsWith("B")&& name.endsWith("L"));{
-        if (name.contains("A"))
-        System.out.println(name2);}
-    if (name.startsWith("C")&& name.endsWith("K"));{
-
-    System.out.println(name3);}
-
+    if(name1.startsWith("A") && name1.endsWith("L")){
+        System.out.println("Your name is " + name1.replace("A", "B"));
+    }else if (name1.startsWith("B") && name1.endsWith("L") && name1.contains("A")) {
+        name1 = name1.replace(name1.charAt(1),'G');
+        System.out.println(name1);
+    }else if (name1.startsWith("C") && name1.endsWith("K")){
+        if (name.equals("Clark")){
+            System.out.println("Your name is Clark");
+        } else if (name.equals("CLARK")) {
+            System.out.println("Your name is CLARK");
+        }else {
+            System.out.println("Your name is not Clark or CLARK");
+        }
+    }
 }
 }

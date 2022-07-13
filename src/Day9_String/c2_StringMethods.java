@@ -122,5 +122,6 @@ trim()	              Removes whitespace from both ends of a string	             
         boolean hjhjghchg = name16.startsWith("A");
         System.out.println(hjhjghchg);
 
+
     }
 }
