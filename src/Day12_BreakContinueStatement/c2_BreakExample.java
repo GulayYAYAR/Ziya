@@ -26,7 +26,7 @@ public class c2_BreakExample { public static void main(String[] args) {
     for (int i = 1; i <=50 ; i++) { // i value 0,1,2,3,4,5........50
 
         //sum =sum+i; // 0+1+2+3+4+5+6.....+50
-        if(sum >= 140){
+        if(sum+i>= 140){
             break;
         }
         sum =sum+i; // 0+1+2+3+4+5+6.....+50
